@@ -13,7 +13,7 @@ import doneIcon from '../assets/done.png';
 import lowIcon from '../assets/low.png';
 import highIcon from '../assets/high.png';
 import mediumIcon from '../assets/medium.png';
-import urgentIcon from '../assets/urgent.jpg';
+import urgentIcon from '../assets/urgent.png';
 
 const App = () => {
   const [showDropdowns, setShowDropdowns] = useState(false);
@@ -196,7 +196,7 @@ const App = () => {
         <div className="group-header">
           {renderGroupIcon(group)}
           {grouping ==='user' && <img className="img2" src={l2} alt="List icon" /> }
-          <h3 style={{marginLeft:10}}>{group}</h3>
+          <h3 style={{marginLeft:10}}>{group}</h3> <text style={{marginLeft:10}}>{tickets.length}</text>
         </div>
             {tickets.map((ticket) => (
               <div key={ticket.id} className="ticket">
