@@ -196,7 +196,10 @@ const App = () => {
         <div className="group-header">
           {renderGroupIcon(group)}
           {grouping ==='user' && <img className="img2" src={l2} alt="List icon" /> }
-          <h3 style={{marginLeft:10}}>{group}</h3> <text style={{marginLeft:10}}>{tickets.length}</text>
+          <div className="group_hed">
+          <h4 style={{marginLeft:10}}>{group}</h4> 
+          <text style={{marginLeft:10}}>{tickets.length}</text>
+          </div>
         </div>
             {tickets.map((ticket) => (
               <div key={ticket.id} className="ticket">
@@ -206,9 +209,9 @@ const App = () => {
                     <img className="img2" src={l2} alt="List icon" />
                   )}
                 </div>
-                <h4>
+                <h5>
                   {ticket.title}  
-                </h4>
+                </h5>
                 <div className="entry">
                   <img className="img4" src={l3} alt="List icon" />
                   <div className="ftr">
